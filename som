@@ -1,0 +1,12 @@
+#!/bin/bash
+
+f=$1
+yes='y'
+echo "Are you sure that you want to remove this file?(y/n)"
+read ANSWER
+
+if [$ANSWER=$yes]; then
+	mv $f ~/RECYCLE gzip ~/RECYCLE/$f
+else
+	echo 'Операция отменена'
+fi
