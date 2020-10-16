@@ -6,6 +6,10 @@ mkdir -p ~/RECYCLE
 if [ -f $1 ]; then
 	mv $f ~/RECYCLE
 	gzip ~/RECYCLE/$f
+	echo "the file was moved to the repository 'RECYCLE'."
 else
 	echo 'Операция отменена'
 fi
+find ~/RECYCLE -mtime +6 -delete
+echo "Waiting! This file will remove in 7 days"
+
