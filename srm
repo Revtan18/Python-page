@@ -1,0 +1,9 @@
+#!/bin/bash
+f=$1
+
+if [ -f $1 ]; then
+	mv $f ~/RECYCLE
+	gzip ~/RECYCLE/$f
+else
+	echo 'Операция отменена'
+fi
